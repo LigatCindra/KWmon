@@ -95,23 +95,23 @@ setInterval(() => {
 //Animasi fungsi makan dan health
 function verifikasiIndex(){
   if(index == 0){
-    aset = ["Assets/Drive/1a-eat.gif", "Assets/Drive/1a-health.gif", "Assets/Drive/1a-x.gif"]
+    aset = ["Assets/Drive/1a-eat.gif", "Assets/Drive/1a-health.gif", "Assets/Drive/1a-play.gif"]
   } else if(index == 1){
-    aset = ["Assets/Drive/2a-eat.gif", "Assets/Drive/2a-health.gif"]
+    aset = ["Assets/Drive/2a-eat.gif", "Assets/Drive/2a-health.gif", "Assets/Drive/2a-play.gif"]
   } else if(index == 2){
-    aset = ["Assets/Drive/3a-eat.gif", "Assets/Drive/3a-health.gif"]
+    aset = ["Assets/Drive/3a-eat.gif", "Assets/Drive/3a-health.gif", "Assets/Drive/3a-play.gif"]
   } else if(index == 3){
-    aset = ["Assets/Drive/1b-eat.gif", "Assets/Drive/1b-health.gif"]
+    aset = ["Assets/Drive/1b-eat.gif", "Assets/Drive/1b-health.gif", "Assets/Drive/1b-play.gif"]
   } else if(index == 4){
-    aset = ["Assets/Drive/2b-eat.gif", "Assets/Drive/2b-health.gif"]
+    aset = ["Assets/Drive/2b-eat.gif", "Assets/Drive/2b-health.gif", "Assets/Drive/2b-play.gif"]
   } else if(index == 5){
-    aset = ["Assets/Drive/3b-eat.gif", "Assets/Drive/3b-health.gif"]
+    aset = ["Assets/Drive/3b-eat.gif", "Assets/Drive/3b-health.gif", "Assets/Drive/3b-play.gif"]
   } else if(index == 6){
-    aset = ["Assets/Drive/1c-eat.gif", "Assets/Drive/1c-health.gif"]
+    aset = ["Assets/Drive/1c-eat.gif", "Assets/Drive/1c-health.gif", "Assets/Drive/1c-play.gif"]
   } else if(index == 7){
-    aset = ["Assets/Drive/2c-eat.gif", "Assets/Drive/2c-health.gif"]
+    aset = ["Assets/Drive/2c-eat.gif", "Assets/Drive/2c-health.gif", "Assets/Drive/2c-play.gif"]
   } else if(index == 8){
-    aset = ["Assets/Drive/3c-eat.gif", "Assets/Drive/3c-health.gif"]
+    aset = ["Assets/Drive/3c-eat.gif", "Assets/Drive/3c-health.gif", "Assets/Drive/3c-play.gif"]
   } 
   return aset;
 }
@@ -186,7 +186,7 @@ sleepButton.addEventListener("click", function() {
       clearInterval(countdownTimer);
       characterContainer.src = characterImages[index];
     }
-  }, 1000);
+  }, 3000);
 });
 
 // menyembunyikan overlay ketika area di luar button sleep ditekan
@@ -297,12 +297,24 @@ suicideButton.addEventListener('click', function(){
 //fungsi play
 //play-button and function
 playButton.addEventListener('click', function() {
+  verifikasiIndex();
+  characterContainer.src = aset[2];
   exp += 5;
   play += 30;
   if (play > 30) {
       play = 30;
   }
   playBarFill.style.width = (play / 30) * 100 + "%";
+  const timeLimit = 3; // dalam detik
+  let timeLeft = timeLimit;
+  const countdownTimer = setInterval(function() {
+    timeLeft--;
+    if (timeLeft <= 0) {
+      // waktu habis, kembalikan gambar ke gambar awal
+      clearInterval(countdownTimer);
+      characterContainer.src = characterImages[index];
+    }
+  }, 3000);
   /*
   characterContainer.style.width = "100px";
   characterContainer.style.height = "100px";
