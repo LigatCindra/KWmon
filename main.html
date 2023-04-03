@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KWmon</title>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="Assets/Drive/kwmon.png" type="image/x-icon">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div id="header">
+                <img src="Assets/Drive/kwmon.png">
+                <h1>KWmon</h1>
+            </div>
+            <div class="character-control">
+                <button onclick="prevCharacter()">&lt</button>
+                <img src="Assets/Drive/1a.gif" id="choose-character">
+                <button onclick="nextCharacter()">&gt</button>
+            </div>
+            <div>
+                <form>
+                    <label for="name">Nama: </label>
+                    <input type="text" name="nama" id="nameInput" required>
+                    <a href="main1.html">
+                        <button type="submit" value="Star Game">Start Game</button>
+                    </a>
+                </form> 
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

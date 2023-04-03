@@ -1,0 +1,97 @@
+/* set font family for entire document */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(Assets/Drive/kwmonpattern.png);
+  }
+  
+  /* style container div */
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  /* style header */
+  #header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #header img {
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  #header h1 {
+    font-size: 50px;
+    color: #2e2e2e;
+  }
+  
+  /* style character-control */
+  .character-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .character-control button {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .character-control button:hover {
+    background-color: #fff;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+  }
+  
+  /* style form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 20px;
+    color: #2e2e2e;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+  
+  button[type="submit"] {
+    background-color: #2e2e2e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #fff;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+  }

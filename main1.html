@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>In Game</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="Assets/Drive/kwmon.png" type="image/x-icon">
+  </head>
+  
+  <body>
+    <div id="header">
+        <img src="Assets/Drive/kwmon.png">
+        <h1>KWmon</h1>
+    </div>
+    <h3 id="namaKarakter"></h3>
+    <br><br>
+    
+    <div class="container">
+      <div class="game-container">
+        <div class="clock">
+          <span id="hours">06</span>
+          <span>:</span>
+          <span id="minutes">00</span>
+        </div>
+
+        <div id="health-bar-container">
+          <div class="health-bar">
+            <div class="health-bar-fill" id="health-bar-fill">Health</div>
+          </div>
+        </div>
+
+        <div id="eat-bar-container"> 
+          <div class="eat-bar">
+            <div class="eat-bar-fill" id="eat-bar-fill">Eat</div>
+          </div>
+        </div>
+
+        <div id="play-bar-container"> 
+          <div class="play-bar">
+            <div class="play-bar-fill" id="play-bar-fill">Play</div>
+          </div>
+        </div>
+
+        <div id="sleep-bar-container"> 
+          <div class="sleep-bar">
+            <div class="sleep-bar-fill" id="sleep-bar-fill">Sleep</div>
+          </div>
+        </div>
+
+        <div class="item-container">
+          <img id="character-container" class="character-container">
+          <!--
+          <img id="obstacle1" class="obstacle">
+          <img id="obstacle2" class="obstacle">
+          -->
+        </div>
+      </div>
+
+      <br>
+
+      <table>
+        <tr>
+          <td><button type="button" id="makan">Makan</button></td>
+          <td><button type="button" id="health">Kesehatan</button></td>
+          <td><button type="button" id="play">Main</button></td>
+          <td><button type="button" id="sleep">Tidur</button></td>
+          <td><button type="button" id="manual">Manual</button></td>
+          <td><button type="button" id="suicide">Suicide</button></td>
+        </tr>
+      </table>  
+        </div>
+      </div>
+      <div id="overlay1" class="overlay1">
+        <div class="overlay-content1">
+          <p id="manual-text">
+            *Selama membaca, harap perhatikan bar juga*
+            <br><br>
+            Selamat Datang di Game KWMon, game peliharaan yang dimana kalian merawat 
+            pet kalian agar dapat terus hidup.
+            <br><br>
+            Kalian harus tetap memperhatikan bar yang ada disebelah kanan, jika salah 
+            satu bar habis pet kalian akan mati atau Game Over.
+            <br><br>
+            Untuk bar yang pertama ada "Health" bar yang dimana ini merujuk kepada
+            Kesehatan pet kalian. Kalian bisa menaikkan kembali bar tersebut dengan
+            menekan tombol "Kesehatan" yang tertera di menu.
+            <br><br>
+            Bar yang kedua adalah "Eat", bar ini merujuk kepada kondisi kelaparan dari
+            pet kalian. Untuk menaikkan bar ini, kalian bisa menggunakan tombol "Makan"
+            <br><br>
+            Bar yang ketiga adalah "Play", bar ini menunjukan kegembiraan pet anda.
+            Untuk menjaga kestabilan bar ini, kalian bisa menggunakan tombol "Main"
+            <br><br>
+            Dan bar yang keempat adalah "Sleep", bar ini menunjukkan kondisi mentalitas
+            pet kalian, jika kurang tidur maka akan terjadi Game Over. Tapi tenang saja,
+            kalian bisa menaikkan bar ini dengan menggunakan tombol "Tidur" yang ada 
+            di menu.
+            <br><br>
+            Di bawah menu terdapat indikator dari keadaan live pet kalian sekarang,
+            atau bisa dibilang bentuk persentasi dari bar yang tertera. 
+            <br><br>
+            Terdapat juga exp di bagian indikator, ini merujuk kepada Exp pet kalian
+            dan level dari pet kalian. Kalian akan memulai pada Level 0, setelah 1500 exp
+            pet kalian akan berevolusi ke fase kedua yaitu Level 1. Dan setelah 
+            mencapai 3500 exp, pet kalian akan memasuki fase ketiga (fase terakhir)
+            yaitu Level 2.
+            <br><br>
+            Setiap detik exp akan didapat sebesar 5 poin dan setiap melakukan aktivitas 
+            juga mendapatkan 5 poin. Setiap detik sleep, play dan eat akan berkurang sebesar
+            0.5 poin, dengan masing-masing maksimal 30 poin. Sedangkan health setiap detik 
+            akan berkurang 2 poin dengan maksimal 100 poin.
+            <br><br>
+            Ketika tombol makan diklik, maka eat akan bertambah 3 poin. Ketika tombol Kesehatan 
+            diklik, maka health akan bertambah 5 poin. Ketika tombol main diklik, maka play 
+            akan bertambah 30 poin. Ketika tidur diklik, maka sleep akan bertambah 30 poin, 
+            eat berkurang 4 poin, health berkurang 10 poin, dan play berkurang 3 poin.
+            <br><br>
+            Dibagian menu terdapat juga tombol "Suicide" yang dimana tombol ini berfungsi
+            sebagai resetter dari progress kalian. Jadi berhati - hatilah dalam memencet
+            tombol tersebut.
+            <br><br>
+            Berikut evolusi setiap karakter:
+            <br><br>
+            <img src="Assets/Drive/1a.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1b.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1c.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2a.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2b.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2c.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3a.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3b.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3c.gif" style="width: 150px; height: 150px;">
+            <br><br>
+            Perbedaan animasi setiap aktivitas:
+            <br><br>
+            <img src="Assets/Drive/1a-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1b-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1c-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2a-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2b-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2c-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3a-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3b-eat.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3c-eat.gif" style="width: 150px; height: 150px;">
+            <br><br>
+            <img src="Assets/Drive/1a-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1b-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/1c-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2a-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2b-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/2c-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3a-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3b-health.gif" style="width: 150px; height: 150px;">
+            <img src="Assets/Drive/3c-health.gif" style="width: 150px; height: 150px;">
+            <br><br>
+            *Tekan asal untuk menutup pop-up*
+            </p>
+        </div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <p>Pencet asal untuk kembali ke halaman utama</p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div id="indikator"></div>
+
+    <script src="index.js"></script>
+    <script src="index1.js"></script>
+    <script src="index2.js"></script>
+  </body>
+</html>
