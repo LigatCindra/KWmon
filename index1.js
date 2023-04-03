@@ -320,6 +320,61 @@ playButton.addEventListener('click', function() {
   characterContainer.style.height = "100px";
   startGame();
   */
+
+  alert('Ayo bermain game batu, gunting, kertas bersama ' + namaKarakter +  '!');
+  
+  var mulai = true;
+  while (mulai) {
+    //Pilihan User
+    var user = prompt('Silahkan pilih: Batu, Gunting, Kertas! \nnote: penulisan diawali huruf kapital');
+
+    //Pilihan Komputer
+    var komputer = Math.random();
+    if( komputer <= 0.33 ) {
+      komputer = 'Batu';
+    } else if( komputer > 0.33 && komputer < 0.67 ) {
+      komputer = 'Gunting';
+    } else {
+      komputer = 'Kertas';
+    }
+
+    var hasil = '';
+    //Membuat rules
+    if( user == komputer ) {
+      hasil = 'SERI';
+    } else if( user == 'Batu' ) {
+      if( komputer == 'Gunting' ) {
+        hasil = 'MENANG';
+      } else {
+        hasil = 'KALAH';
+      }
+    } else if( user == 'Gunting' ) {
+      if( komputer == 'Batu' ) {
+        hasil = 'KALAH';
+      } else {
+        hasil = 'MENANG';
+      }
+    } else if( user == 'Kertas' ) {
+      if( komputer == 'Batu' ) {
+        hasil = 'MENANG';
+      } else {
+        hasil = 'KALAH';
+      }
+    }
+
+    //Menampilkan hasil
+    if( user == null ) {
+      alert('Kamu tidak memasukkan pilihan apa - apa.');
+    } else if( user !== 'Batu' && user !== 'Gunting' && user !== 'Kertas' ) {
+      alert('Pilihan kamu tidak tertera di list.\nPastikan penulisan benar');
+    } else {
+      alert('Kamu memilih : ' + user + '\nSedangkan ' + namaKarakter + ' memilih : ' + komputer + '\nHasilnya : Kamu ' + hasil + '.' );
+    }
+
+    mulai = confirm('Mau lagi??');
+  }
+
+  alert('Terimakasih sudah bermain >_<');
 });
 /*
 function handleKeyDown(event) {
