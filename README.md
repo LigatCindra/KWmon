@@ -1,2 +1,0 @@
-# KWmon
-Pet Management Game
